@@ -1,6 +1,6 @@
 export default function Projetos() {
   const projects = [
-    { title: 'Jogo da Forca', img: '/images/forca.png', link: 'https://vercel.com/joaosvas-projects/jogo-da-forca' },
+    { title: 'Jogo da Forca', img: '/images/forca.png', link: 'https://jogo-da-forca-seven-tawny.vercel.app/' },
     { title: 'Perfume-card', img: '/images/perfume.png', link: 'https://joaosva.github.io/perfume-card/' },
     { title: 'Lista de Produtos', img: '/images/cart.png', link: 'https://joaosva.github.io/product-list-with-card/' }
   ]
