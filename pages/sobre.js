@@ -2,7 +2,7 @@ export default function Sobre() {
   const tecnologias = [
     "Next.js (13.x)",
     "React (18)",
-    "Fetch API (Integração com APIs públicas via proxy)",
+    "Fetch API",
     "Arquitetura de Componentes (Navbar, Footer, ApiPreview)",
     "CSS Responsivo com Animações Hover"
   ];

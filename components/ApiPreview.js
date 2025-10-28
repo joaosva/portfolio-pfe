@@ -1,36 +1,40 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 export default function ApiPreview() {
-  const [quotes, setQuotes] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [quote, setQuote] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchQuotes() {
+    async function fetchQuote() {
       try {
-        const res = await fetch('https://api.allorigins.win/raw?url=https://api.quotable.io/quotes?limit=6')
-        if (!res.ok) throw new Error('Erro na resposta da API')
-        const data = await res.json()
-        setQuotes(data.results || [])
-      } catch (e) {
-        console.error('Erro ao buscar API:', e)
+        const res = await fetch("/api/quotes");
+        const data = await res.json();
+        setQuote(data[0]);
+      } catch (error) {
+        console.error("Erro ao carregar frase:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     }
-    fetchQuotes()
-  }, [])
 
-  if (loading) return <div className="card">Carregando frases...</div>
-  if (!quotes.length) return <div className="card">Nenhuma frase encontrada.</div>
+    fetchQuote();
+  }, []);
 
   return (
-    <section className="quotes-grid">
-      {quotes.map((q) => (
-        <article key={q._id} className="quote-card">
-          <p className="quote-text">“{q.content}”</p>
-          <p className="quote-author">— {q.author}</p>
-        </article>
-      ))}
-    </section>
-  )
+    <div className="card hover-scale">
+      <h2>💬 Frase do Dia</h2>
+      {loading ? (
+        <p>Carregando...</p>
+      ) : quote ? (
+        <>
+          <p style={{ fontStyle: "italic", marginTop: "10px" }}>
+            “{quote.q}”
+          </p>
+          <p style={{ textAlign: "right", color: "#94a3b8" }}>— {quote.a}</p>
+        </>
+      ) : (
+        <p>Não foi possível carregar a frase.</p>
+      )}
+    </div>
+  );
 }
