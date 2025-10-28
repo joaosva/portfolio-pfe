@@ -1,19 +1,18 @@
 export default function Projetos() {
   const projects = [
-    { title: 'Projeto Vercel 1', img: '/images/sample1.svg', link: 'https://vercel.com' },
-    { title: 'Projeto Vercel 2', img: '/images/sample2.svg', link: 'https://vercel.com' },
-    { title: 'Projeto Vercel 3', img: '/images/sample3.svg', link: 'https://vercel.com' }
+    { title: 'Jogo da Forca', img: '/images/forca.png', link: 'https://vercel.com/joaosvas-projects/jogo-da-forca' },
+    { title: 'Perfume-card', img: '/images/perfume.png', link: 'https://joaosva.github.io/perfume-card/' },
+    { title: 'Lista de Produtos', img: '/images/cart.png', link: 'https://joaosva.github.io/product-list-with-card/' }
   ]
   return (
     <div className="page">
       <h1>Projetos Desenvolvidos</h1>
-      <p>Coloque aqui seus links e imagens dos projetos hospedados no Vercel.</p>
       <div className="projects-grid">
         {projects.map((p, i) => (
           <a className="project-card hover-scale" key={i} href={p.link} target="_blank" rel="noreferrer">
             <img src={p.img} alt={p.title} />
             <h4>{p.title}</h4>
-            <span>Ver no Vercel</span>
+            <span>Acesse</span>
           </a>
         ))}
       </div>

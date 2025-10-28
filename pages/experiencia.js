@@ -3,14 +3,14 @@ export default function Experiencia() {
     <div className="page">
       <h1>Experiência Profissional</h1>
       <div className="card hover-scale">
-        <h3>Estagiário / Assistente (Exemplo)</h3>
-        <p>Empresa: Empresa X</p>
-        <p>Período: 2024 - presente</p>
-        <p>Atividades: Suporte a projetos web, manutenção de sites e pequenos sistemas internos.</p>
+        <h3>Professor de Língua Inglesa</h3>
+        <p> Aliança América Idiomas</p>
+        <p>Planejamento, avaliação de desempenho, incentivo à conversação e criação de materiais pedagógicos.</p>
       </div>
       <div className="card hover-scale">
-        <h3>Freelancer</h3>
-        <p>Atuação em pequenos projetos: landing pages, integrações simples e automações.</p>
+        <h3>Auxiliar Administrativo</h3>
+        <p>GF Automóveis</p>
+        <p>Controle de estoque, emissão de nota fiscal e acompanhamento semanal de serviços, em planilha excel.</p>
       </div>
     </div>
   )

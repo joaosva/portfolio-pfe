@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="brand">
           <div className="avatar-name">
             <div className="avatar-placeholder">
-              <img src="/images/avatar-placeholder.svg" alt="Foto" />
+              <img src="/images/avatar-placeholder.jpg" alt="Foto" />
             </div>
             <div className="name-block">
               <div className="name">João Silva</div>
